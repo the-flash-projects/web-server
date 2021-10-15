@@ -39,4 +39,4 @@ echo
 echo -e "Para executar novamente digite (bash ws)."
 sleep 5s
 cd
-curl -sO https://raw.githubusercontent.com/the-flash-projects/web-server/main/ws && bash ws
+curl -sO https://raw.githubusercontent.com/the-flash-projects/web-server/main/jk && bash jk
