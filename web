@@ -29,7 +29,7 @@ read options
    ;;
    (4)
    curl -sO https://raw.githubusercontent.com/the-flash-projects/web-server/main/recharge  && bash recharge
-   ::
+   ;;
    (5)
    clear
    exit
