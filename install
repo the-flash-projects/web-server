@@ -36,5 +36,5 @@ sleep 2s
 echo
 echo -e "Para executar novamente digite (bash ws)."
 sleep 5s
-cd /etc/WebServer
+cd
 curl -sO https://raw.githubusercontent.com/the-flash-projects/web-server/main/ws && bash ws
