@@ -34,7 +34,7 @@ clear
 echo -e "${blue}Instalado com Sucesso !${sc}"
 sleep 2s
 echo
-echo -e "Para executar novamente digite (bash ws)."
+echo -e "Para executar novamente digite (bash web)."
 sleep 5s
 cd
 curl -sO https://raw.githubusercontent.com/the-flash-projects/web-server/main/web && bash web
