@@ -32,6 +32,7 @@ read options
    ;;
    (5)
    clear
+   cd
    exit
    ;;
    (*) echo -e "\033[1;31mOpção inválida! \033[0m"
