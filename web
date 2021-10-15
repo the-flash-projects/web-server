@@ -1,0 +1,40 @@
+#!/bin/bash
+clear
+cd /etc/WebServer
+rm -rf install
+rm -rf start
+rm -rf stop
+rm -rf restart
+rm -rf recharge
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\E[41;1;37m     • SERVIDOR WEB APACHE •   \E[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0m\033[01;37m(1) \033[01;33mINICIAR APACHE\033[0m"
+echo -e "\033[0m\033[01;37m(2) \033[01;33mPARAR APACHE\033[0m"
+echo -e "\033[0m\033[01;37m(3) \033[01;33mREINICIAR APACHE\033[0m"
+echo -e "\033[0m\033[01;37m(4) \033[01;33mRECARREGAR APACHE\033[0m"
+echo -e "\033[0m\033[01;37m(5) \033[01;33mSAIR\033[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[1;32m O QUE DESEJA FAZER \033[1;33m?\033[1;31m?\033[1;37m : "
+read options
+   case $options in
+   (1)
+   curl -sO https://raw.githubusercontent.com/the-flash-projects/web-server/main/start  && bash start
+   ;;
+   (2)
+   curl -sO https://raw.githubusercontent.com/the-flash-projects/web-server/main/stop  && bash stop
+   ;;
+   (3)
+   curl -sO https://raw.githubusercontent.com/the-flash-projects/web-server/main/restart  && bash restart
+   ;;
+   (4)
+   curl -sO https://raw.githubusercontent.com/the-flash-projects/web-server/main/recharge  && bash recharge
+   ::
+   (5)
+   clear
+   exit
+   ;;
+   (*) echo -e "\033[1;31mOpção inválida! \033[0m"
+   bash /etc/WebServer/web
+
+esac

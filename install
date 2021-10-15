@@ -1,0 +1,40 @@
+#!/bin/bash
+red='\033[1;31m'
+blue='\033[0;34m'
+sc='\033[0m'
+clear
+cd /etc
+mkdir WebServer
+cd
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\E[41;1;37m      • INSTALAÇÃO DO SCRIPT •   \E[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sleep 3s
+echo -ne "${red}Atualizando pacotes...${sc}"; apt-get update &> /dev/null; echo " done.";
+sleep 2s
+clear
+echo -e "${red}Instalando Apache...${sc}"
+sleep 2s
+echo
+apt-get install apache2
+sleep 2s
+clear
+echo -e "${red}Configurando Firewall...${sc}"
+sleep 2s
+echo
+sudo ufw show app list
+sleep 3s
+clear
+echo -e "${red}Configurando Tráfego....${sc}"
+sleep 2s
+echo
+sudo ufw allow 'Apache'
+sleep 3s
+clear
+echo -e "${blue}Instalado com Sucesso !${sc}"
+sleep 2s
+echo
+echo -e "Para executar novamente digite (bash ws)."
+sleep 5s
+cd /etc/WebServer
+curl -sO https://raw.githubusercontent.com/the-flash-projects/web-server/main/ws && bash ws
