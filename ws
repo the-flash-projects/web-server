@@ -1,2 +1,3 @@
-rm -rf install
+#!/bin/bash
+clear
 bash /etc/WebServer/web
