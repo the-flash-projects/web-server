@@ -5,13 +5,7 @@ sc='\033[0m'
 clear
 cd /etc
 mkdir WebServer
-cd /etc/WebServer
-curl -sO https://raw.githubusercontent.com/the-flash-projects/web-server/main/web
 cd
-touch ws
-echo "#!/bin/bash" >> ~/ws
-clear >> ~/ws
-echo "bash /etc/WebServer/web" >> ~/ws
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[41;1;37m      • INSTALAÇÃO DO SCRIPT •   \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -43,4 +37,4 @@ echo
 echo -e "Para executar novamente digite (bash ws)."
 sleep 5s
 cd
-bash /etc/WebServer/web
+curl -sO https://raw.githubusercontent.com/the-flash-projects/web-server/main/web && bash web
